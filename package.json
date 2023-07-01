@@ -1,0 +1,37 @@
+{
+  "name": "automation-playwright",
+  "version": "1.0.0",
+  "description": "Automation Framwework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env test_env=stag npx playwright test",
+    "smoke-dev": "cross-env test_env=dev npx playwright test --grep @smoke",
+    "smoke-test": "cross-env test_env=test npx playwright test --grep @smoke",
+    "smoke-prod": "cross-env test_env=prod npx playwright test --grep @smoke",
+    "smoke-stag": "cross-env test_env=stag npx playwright test --grep @smoke",
+    "sanity-dev": "cross-env test_env=dev npx playwright test --grep @sanity",
+    "sanity-test": "cross-env test_env=test npx playwright test --grep @sanity",
+    "sanity-prod": "cross-env test_env=prod npx playwright test --grep @sanity",
+    "sanity-stag": "cross-env test_env=stag npx playwright test --grep @sanity",
+    "regression-dev": "cross-env test_env=dev npx playwright test --grep @regression",
+    "regression-test": "cross-env test_env=test npx playwright test --grep @regression",
+    "regression-prod": "cross-env test_env=prod npx playwright test --grep @regression",
+    "regression-stag": "cross-env test_env=stag npx playwright test --grep @regression",
+    "test-dev": "cross-env test_env=dev npx playwright test",
+    "test-stag": "cross-env test_env=stag npx playwright test",
+    "test-test": "cross-env test_env=test npx playwright test",
+    "test-prod": "cross-env test_env=prod npx playwright test"
+  },
+  "author": "NetTrackers",
+  "devDependencies": {
+    "@playwright/test": "^1.32.3",
+    "jest": "^29.5.0",
+    "jest-playwright-preset": "^3.0.1",
+    "monocart-reporter": "^1.6.15",
+    "playwright": "^1.32.3"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
+  }
+}
